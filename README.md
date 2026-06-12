@@ -13,11 +13,11 @@ streamlit run app.py
 
 | Page | Contenu |
 |------|---------|
-| 🏠 Vue Générale | KPIs, évolution buts, affluence, distribution scores |
-| 🌍 Analyse par Équipe | Top 15, scatter, radar comparatif, fiche nation |
-| 🤖 Clustering ML | K-Means k=4, méthode du coude, profils de jeu |
-| 🎯 Prédiction ML | LogReg + HGB, matrices de confusion, importance features |
-| ⚡ Simulateur | Pronostic match à la demande + quarts de finale scénarisés |
+|  Vue Générale | KPIs, évolution buts, affluence, distribution scores |
+|  Analyse par Équipe | Top 15, scatter, radar comparatif, fiche nation |
+|  Clustering ML | K-Means k=4, méthode du coude, profils de jeu |
+|  Prédiction ML | LogReg + HGB, matrices de confusion, importance features |
+|  Simulateur | Pronostic match à la demande + quarts de finale scénarisés |
 
 ## Stack technique
 - **ML** : scikit-learn (KMeans, LogisticRegression, HistGradientBoosting)
