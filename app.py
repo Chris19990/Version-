@@ -982,12 +982,12 @@ elif page == "⚡  Simulateur":
                 ))
                 w_name = [qa,"Nul",qb][wi]
                 fig_qf.update_layout(
+                    **{**PLOTLY_BASE,
+                       "yaxis": dict(tickformat=".0%", range=[0,max(probs2)*1.35], gridcolor=BORDER),
+                       "margin": dict(t=45,b=30,l=15,r=15)},
                     title=dict(text=f"<b style='color:{GOLD}'>{qa}</b> vs <b style='color:{GOLD}'>{qb}</b>",
                                font=dict(size=11,color=TEXT_H), x=0.5),
-                    yaxis=dict(tickformat=".0%", range=[0,max(probs2)*1.35],
-                               gridcolor=BORDER),
-                    **PLOTLY_BASE, height=290,
-                    margin=dict(t=45,b=30,l=15,r=15),
+                    height=290,
                     showlegend=False
                 )
                 st.plotly_chart(fig_qf, use_container_width=True)
@@ -1023,11 +1023,12 @@ elif page == "⚡  Simulateur":
                             textposition="outside", textfont=dict(size=10,color=TEXT_H)
                         ))
                         fig_sf.update_layout(
+                            **{**PLOTLY_BASE,
+                               "yaxis": dict(tickformat=".0%",range=[0,max(ps)*1.35],gridcolor=BORDER),
+                               "margin": dict(t=40,b=25,l=15,r=15)},
                             title=dict(text=f"<b>{sa}</b> vs <b>{sb}</b>",
                                        font=dict(size=11,color=TEXT_H),x=0.5),
-                            yaxis=dict(tickformat=".0%",range=[0,max(ps)*1.35],gridcolor=BORDER),
-                            **PLOTLY_BASE, height=270,
-                            margin=dict(t=40,b=25,l=15,r=15), showlegend=False
+                            height=270, showlegend=False
                         )
                         st.plotly_chart(fig_sf, use_container_width=True)
                         st.markdown(f"""<div style="text-align:center;font-size:0.85rem;
@@ -1052,9 +1053,10 @@ elif page == "⚡  Simulateur":
                             textposition="outside",textfont=dict(size=12,color=TEXT_H)
                         ))
                         fig_fin.update_layout(
-                            yaxis=dict(tickformat=".0%",range=[0,max(pf)*1.35],gridcolor=BORDER),
-                            **PLOTLY_BASE, height=300,
-                            margin=dict(t=20,b=25,l=20,r=20), showlegend=False
+                            **{**PLOTLY_BASE,
+                               "yaxis": dict(tickformat=".0%",range=[0,max(pf)*1.35],gridcolor=BORDER),
+                               "margin": dict(t=20,b=25,l=20,r=20)},
+                            height=300, showlegend=False
                         )
                         st.plotly_chart(fig_fin, use_container_width=True)
                     with col_champ:
