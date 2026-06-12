@@ -130,7 +130,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.markdown('<div class="nav-lbl">Navigation</div>', unsafe_allow_html=True)
-    PAGES = ["🏠  Vue Générale","🌍  Analyse par Équipe","🤖  Clustering ML","🎯  Prédiction ML","⚡  Simulateur"]
+    PAGES = ["  Vue Générale","  Analyse par Équipe","  Clustering ML","  Prédiction ML","  Simulateur"]
     if "page" not in st.session_state:
         st.session_state["page"] = PAGES[0]
     page = st.radio("Navigation", PAGES,
@@ -193,7 +193,7 @@ def hex_rgba(hex_color, alpha=0.8):
 # ══════════════════════════════════════════════════════════════
 # PAGE 1 — VUE GÉNÉRALE
 # ══════════════════════════════════════════════════════════════
-if page == "🏠  Vue Générale":
+if page == "  Vue Générale":
     st.markdown(f"""
     <h1 style="color:{TEXT_H};font-size:1.55rem;font-weight:700;margin-bottom:4px;">
       Vue Générale <span style="color:{GOLD};">·</span> Analyse Historique FIFA
@@ -355,7 +355,7 @@ if page == "🏠  Vue Générale":
 # ══════════════════════════════════════════════════════════════
 # PAGE 2 — ANALYSE PAR ÉQUIPE
 # ══════════════════════════════════════════════════════════════
-elif page == "🌍  Analyse par Équipe":
+elif page == "  Analyse par Équipe":
     st.markdown(f"""
     <h1 style="color:{TEXT_H};font-size:1.55rem;font-weight:700;margin-bottom:4px;">
       Analyse par Équipe <span style="color:{GOLD};">·</span> Ranking & Profils
@@ -542,7 +542,7 @@ elif page == "🌍  Analyse par Équipe":
 # ══════════════════════════════════════════════════════════════
 # PAGE 3 — CLUSTERING ML
 # ══════════════════════════════════════════════════════════════
-elif page == "🤖  Clustering ML":
+elif page == "  Clustering ML":
     st.markdown(f"""
     <h1 style="color:{TEXT_H};font-size:1.55rem;font-weight:700;margin-bottom:4px;">
       Clustering ML <span style="color:{GOLD};">·</span> K-Means · Profils de Jeu
@@ -683,7 +683,7 @@ elif page == "🤖  Clustering ML":
 # ══════════════════════════════════════════════════════════════
 # PAGE 4 — PRÉDICTION ML
 # ══════════════════════════════════════════════════════════════
-elif page == "🎯  Prédiction ML":
+elif page == "  Prédiction ML":
     st.markdown(f"""
     <h1 style="color:{TEXT_H};font-size:1.55rem;font-weight:700;margin-bottom:4px;">
       Prédiction ML <span style="color:{GOLD};">·</span> Régression Logistique
@@ -818,7 +818,7 @@ elif page == "🎯  Prédiction ML":
 # ══════════════════════════════════════════════════════════════
 # PAGE 5 — SIMULATEUR
 # ══════════════════════════════════════════════════════════════
-elif page == "⚡  Simulateur":
+elif page == "  Simulateur":
     st.markdown(f"""
     <h1 style="color:{TEXT_H};font-size:1.55rem;font-weight:700;margin-bottom:4px;">
       Simulateur <span style="color:{GOLD};">·</span> Pronostics & Quarts de finale
