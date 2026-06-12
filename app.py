@@ -676,8 +676,7 @@ elif page == "🤖  Clustering ML":
             line_color=BORDER, height=28
         )
     ))
-    fig_t.update_layout(**PLOTLY_BASE, height=40+len(cm_df)*30+32,
-                        margin=dict(t=10,b=10,l=10,r=10))
+    fig_t.update_layout(**{**PLOTLY_BASE, "margin": dict(t=10,b=10,l=10,r=10)}, height=40+len(cm_df)*30+32)
     st.plotly_chart(fig_t, use_container_width=True)
 
 
@@ -795,8 +794,7 @@ elif page == "🎯  Prédiction ML":
             line_color=BORDER, height=30
         )
     ))
-    fig_rep.update_layout(**PLOTLY_BASE, height=40+len(rp)*32,
-                          margin=dict(t=10,b=10,l=10,r=10))
+    fig_rep.update_layout(**{**PLOTLY_BASE, "margin": dict(t=10,b=10,l=10,r=10)}, height=40+len(rp)*32)
     st.plotly_chart(fig_rep, use_container_width=True)
 
     # Insights
@@ -925,7 +923,7 @@ elif page == "⚡  Simulateur":
                            align=["left","center","center"],
                            line_color=BORDER, height=27)
             ))
-            fig_comp.update_layout(**PLOTLY_BASE, height=230, margin=dict(t=10,b=10,l=10,r=10))
+            fig_comp.update_layout(**{**PLOTLY_BASE, "margin": dict(t=10,b=10,l=10,r=10)}, height=230)
             st.plotly_chart(fig_comp, use_container_width=True)
 
     # ── Quarts de finale interactifs ──────────────────────────
